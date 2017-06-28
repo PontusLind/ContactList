@@ -1,0 +1,42 @@
+[
+  {
+    "myAddress": [
+      {
+        "Type": "Arbete",
+        "Street": "Vet inte",
+        "ZipCode": "Stockholm",
+        "City": "51515"
+      }
+    ],
+    "myPhonNr": [
+      {
+        "Type": "Hem",
+        "NR": "0723090701"
+      }
+    ],
+    "FirstName": "Pontus",
+    "LastName": "Lind",
+    "SocialSecurityNumber": "9203295050",
+    "ControlContats": null
+  },
+  {
+    "myAddress": [
+      {
+        "Type": "Hem",
+        "Street": "Vet inte",
+        "ZipCode": "Berlin",
+        "City": "agagag"
+      }
+    ],
+    "myPhonNr": [
+      {
+        "Type": "Hem",
+        "NR": "46414141414"
+      }
+    ],
+    "FirstName": "Rebecca",
+    "LastName": "Holm",
+    "SocialSecurityNumber": "9402015050",
+    "ControlContats": null
+  }
+]
