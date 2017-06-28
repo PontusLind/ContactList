@@ -25,6 +25,11 @@ public partial class Contact : System.Web.UI.Page
         {
             GetContacts();
         }
+<<<<<<< HEAD
+=======
+        GetContacts();
+
+>>>>>>> e2169bb54596d42e56449900cda927fb7ac1266b
         myLiteral.Text = JsonConvert.SerializeObject(contactList);
 
     }
@@ -91,6 +96,36 @@ public partial class Contact : System.Web.UI.Page
 
                 contactList.Add(new Person(id, firstName, lastName));
             }
+            myCommand.CommandText = "select * from Adress";
+
+            myReader = myCommand.ExecuteReader();
+
+            while (myReader.Read())
+            {
+                int cid = Convert.ToInt32(myReader["CID"].ToString());
+                int id = Convert.ToInt32(myReader["ID"].ToString());
+                string typ = myReader["Typ"].ToString();
+                string street = myReader["Street"].ToString();
+                string town = myReader["Town"].ToString();
+                string Zip = myReader["Zip"].ToString();
+
+                contactList[cid].myAddress.Add (new Adress(id, cid, typ, street, town, Zip));
+            }
+            myCommand.CommandText = "select * from Phone";
+
+            myReader = myCommand.ExecuteReader();
+
+            while (myReader.Read())
+            {
+                int cid = Convert.ToInt32(myReader["CID"].ToString());
+                int id = Convert.ToInt32(myReader["ID"].ToString());
+                string typ = myReader["Typ"].ToString();
+                string phone = myReader["Phone"].ToString();
+
+                contactList[cid].myPhonNr.Add(new Phone(id, cid, typ, phone));
+            }
+
+
 
         }
         catch (Exception)
@@ -99,7 +134,6 @@ public partial class Contact : System.Web.UI.Page
         finally
         {
             myConnection.Close();
-
         }
     }
 }
