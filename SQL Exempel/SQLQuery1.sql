@@ -8,9 +8,11 @@ insert into Adress (CID, Street, Town, Zip, Typ) values ('1', 'Storgatan 4', 'Ma
 
 select * from Contact, Adress where Contact.ID = Adress.CID
 
-insert int Phone (CID, Typ, Phone) values ('1', 'Hem', '0723739538')
+insert into Phone (CID, Typ, Phone) values ('1', 'Hem', '0723739538')
 
 select * from Contact, Phone where Contact.ID = Phone.CID
+
+select * from Phone
 
 update Contact set Firstname='Håkan', Lastname='Johansson' where ID=4
 
