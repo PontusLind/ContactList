@@ -14,10 +14,15 @@ public class Person
     public string FirstName { get; set; }
     public string LastName { get; set; }
 
+    public List<Adress> myAddress;
+    public List<Phone> myPhonNr;
+
     public Person(int id, string firstName, string lastName)
 	{
         this.id = id;
         FirstName = firstName;
         LastName = lastName;
-	}
+        this.myPhonNr = new List<Phone>();
+        this.myAddress = new List<Adress>();
+    }
 }
