@@ -25,11 +25,8 @@ public partial class Contact : System.Web.UI.Page
         {
             GetContacts();
         }
-<<<<<<< HEAD
-=======
         GetContacts();
 
->>>>>>> e2169bb54596d42e56449900cda927fb7ac1266b
         myLiteral.Text = JsonConvert.SerializeObject(contactList);
 
     }
